@@ -1,0 +1,6 @@
+<trade>
+     <isin>12345</isin>
+     <quantity>1000</quantity>
+      <price>10</price>
+      <tradecurrency>USD</tradecurrency>
+</trade>

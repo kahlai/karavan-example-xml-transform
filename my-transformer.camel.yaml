@@ -1,0 +1,38 @@
+- route:
+    id: route-39af
+    from:
+      uri: direct
+      id: from-36f9
+      parameters:
+        name: my-direct
+      steps:
+        - log:
+            message: ${body}
+            id: log-fc17
+        - to:
+            uri: xslt
+            id: to-83c4
+            parameters:
+              resourceUri: classpath:template.xslt
+        - log:
+            message: ${body}
+            id: log-2477
+- rest:
+    id: rest-2fd5
+    post:
+      - id: post-ade0
+        to: direct:my-direct
+        path: /
+
+
+- route:
+    id: route-39ae
+    from:
+      uri: direct
+      id: from-36fe
+      parameters:
+        name: my-direct3
+      steps:
+        - log:
+            message: ${body}
+            id: log-fc1e
